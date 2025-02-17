@@ -105,5 +105,19 @@
     <script src="script.js"></script>
 </body>
 </html>
+<script>
+    // JavaScript for simple form validation
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (!name || !email || !message) {
+            e.preventDefault();
+            alert('Please fill out all fields before submitting the form.');
+        }
+    });
+</script>
+
 
 
