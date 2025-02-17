@@ -22,14 +22,14 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     // Form validation
-    document.getElementById("contact-form").addEventListener("submit", function (e) {
-        var name = document.getElementById("name").value.trim();
-        var email = document.getElementById("email").value.trim();
-        var message = document.getElementById("message").value.trim();
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
 
         if (!name || !email || !message) {
             e.preventDefault();
-            alert("Please fill out all fields before submitting the form.");
+            alert('Please fill out all fields before submitting the form.');
         }
     });
 });
