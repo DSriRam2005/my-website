@@ -1,7 +1,21 @@
-/* Navbar styling */
+/* General styles */
+body {
+    margin: 0;
+    padding-top: 60px; /* Prevent overlap due to fixed navbar */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar */
 #navbar {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     background-color: #333;
     padding: 10px 0;
@@ -29,7 +43,8 @@
 
 /* Sticky Navbar */
 .sticky {
-    background-color: #555;
+    background-color: #222;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Back to Top Button */
@@ -41,12 +56,32 @@
     background-color: #333;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
 }
-/* Basic form styling */
+
+.back-to-top:hover {
+    background-color: #444;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    background-color: #2d6cdb;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2563eb;
+}
+
+/* Form styling */
 #contact form {
     display: flex;
     flex-direction: column;
@@ -68,10 +103,6 @@ input, textarea {
     border-radius: 5px;
 }
 
-textarea {
-    resize: vertical;
-}
-
 button {
     padding: 1rem;
     background-color: #4CAF50;
@@ -85,14 +116,3 @@ button:hover {
     background-color: #45a049;
 }
 
-.btn {
-    padding: 0.8rem 1.6rem;
-    background-color: #2d6cdb;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    background-color: #2563eb;
-}
