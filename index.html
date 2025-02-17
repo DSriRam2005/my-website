@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Header with Navbar -->
     <header>
         <div class="container">
             <h1>My Portfolio</h1>
@@ -20,6 +22,7 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section id="hero">
         <div class="container">
             <h2>Hi, I'm a Full-Stack Developer</h2>
@@ -28,6 +31,7 @@
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
@@ -35,6 +39,7 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
         <div class="container">
             <h2>Projects</h2>
@@ -58,41 +63,36 @@
         </div>
     </section>
 
-    
-4. Cross-Origin Issue
-Google Forms does not allow target="hidden_iframe" to avoid reloading the page.
-Instead, consider using AJAX to submit the form without redirecting the user.
-Final Code with Fixes
-html
-Copy
-Edit
-<section id="contact">
-    <div class="container">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:sdommeti95@gmail.com">sdommeti95@gmail.com</a></p>
-        <p>GitHub: <a href="#" target="_blank">GitHub Profile</a></p>
-        <p>LinkedIn: <a href="#" target="_blank">LinkedIn Profile</a></p>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:sdommeti95@gmail.com">sdommeti95@gmail.com</a></p>
+            <p>GitHub: <a href="#" target="_blank">GitHub Profile</a></p>
+            <p>LinkedIn: <a href="#" target="_blank">LinkedIn Profile</a></p>
 
-        <form id="contactForm">
-            <label for="name">Full Name:</label>
-            <input type="text" name="entry.2005620554" id="name" placeholder="Your Full Name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" name="entry.1045780047" id="email" placeholder="Your Email Address" required>
-            
-            <label for="message">Message:</label>
-            <textarea name="entry.839337160" id="message" placeholder="Your Message" required></textarea>
-            
-            <button type="submit" class="btn">Submit</button>
-        </form>
-    </div>
-</section>
+            <form id="contactForm">
+                <label for="name">Full Name:</label>
+                <input type="text" name="entry.2005620554" id="name" placeholder="Your Full Name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" name="entry.1045780047" id="email" placeholder="Your Email Address" required>
+                
+                <label for="message">Message:</label>
+                <textarea name="entry.839337160" id="message" placeholder="Your Message" required></textarea>
+                
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
     </footer>
 
-    <button id="backToTop" class="back-to-top">↑ Back to Top</button>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">↑</button>
 
     <script src="script.js"></script>
 </body>
