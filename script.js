@@ -22,16 +22,20 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     // Form validation
-   function validateForm() {
-    var name = document.getElementById("name").value.trim();
-    var email = document.getElementById("email").value.trim();
-    var message = document.getElementById("message").value.trim();
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault(); // Prevent default form submission
+        
+        var formData = new FormData(this);
 
-    if (name === "" || email === "" || message === "") {
-      alert("Please fill in all required fields.");
-      return false;
-    }
-    return true;
-  }
+        fetch("https://docs.google.com/forms/d/e/1FAIpQLSc3WdXJ149iawfo6ddptQpKBSJNg28ewGCBuzbKMXZR2nBrZA/formResponse", {
+            method: "POST",
+            mode: "no-cors",
+            body: formData
+        }).then(() => {
+            alert("Thank you! Your response has been submitted.");
+            document.getElementById("contactForm").reset();
+        }).catch(error => {
+            alert("There was an error submitting the form.");
+        });
     });
-});
+    
