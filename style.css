@@ -1,146 +1,48 @@
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #F3F4F6;
-    color: #1E3A8A;
-}
-
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-/* Header */
-header {
-    background: #1E3A8A;
-    color: white;
-    padding: 15px 0;
-    position: sticky;
+/* Navbar styling */
+#navbar {
+    position: fixed;
     top: 0;
     width: 100%;
-    z-index: 100;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
 }
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
+#navbar ul {
     list-style: none;
-    padding: 0;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
-nav a {
+#navbar li {
+    margin: 0 20px;
+}
+
+#navbar a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-size: 18px;
 }
 
-nav a:hover {
-    color: #FBBF24;
+/* Sticky Navbar */
+.sticky {
+    background-color: #555;
 }
 
-/* Hero Section */
-#hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(to right, #1E3A8A, #60A5FA);
+/* Back to Top Button */
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
     color: white;
-}
-
-#hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-#hero .btn {
-    background: white;
-    color: #1E3A8A;
+    border: none;
     padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    display: inline-block;
-    transition: 0.3s;
-}
-
-#hero .btn:hover {
-    background: #FBBF24;
-    color: #1E3A8A;
-}
-
-/* Section Styles */
-section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-}
-
-/* Project Grid */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.project {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.project:hover {
-    transform: translateY(-5px);
-}
-
-.project .btn {
-    display: inline-block;
-    background: #60A5FA;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: 0.3s;
-}
-
-.project .btn:hover {
-    background: #FBBF24;
-    color: #1E3A8A;
-}
-
-/* Contact Section */
-#contact a {
-    color: #1E3A8A;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-#contact a:hover {
-    text-decoration: underline;
-    color: #FBBF24;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    background: #1E3A8A;
-    color: white;
-    padding: 15px 0;
-    margin-top: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
 }
