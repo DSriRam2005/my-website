@@ -28,18 +28,12 @@
         </div>
     </section>
 
-   <section id="about">
-    <div class="container">
-        <h2>About Me</h2>
-        <p>I am a passionate full-stack developer with a strong background in creating scalable web and mobile applications. I specialize in modern technologies like React, Node.js, and AI/ML, and I enjoy tackling complex problems and building innovative solutions.</p>
-        
-        <p>My journey into tech began with a curiosity for how things work. I started out building small websites as a hobby, and over time, my passion for programming grew into a full-fledged career. I've had the opportunity to work on various projects that have challenged me to constantly learn and grow, from designing user-friendly front-end interfaces to building robust back-end systems.</p>
-
-        <p>What drives me is the ability to solve real-world problems with technology and make an impact on users' lives. Whether it’s building a seamless web app, creating an AI-driven tool, or developing mobile applications, I am always excited by the potential of turning an idea into something tangible. I strive for excellence in everything I do, focusing on clean, maintainable code, and ensuring an intuitive user experience.</p>
-
-        <p>Outside of coding, I am an advocate for continuous learning and keeping up with the latest tech trends. I enjoy collaborating with others and sharing knowledge, as I believe that we all grow stronger through collaboration and innovation.</p>
-    </div>
-</section>
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a passionate full-stack developer with a strong background in creating scalable web and mobile applications...</p>
+        </div>
+    </section>
 
     <section id="projects">
         <div class="container">
@@ -64,60 +58,34 @@
         </div>
     </section>
 
-   <section id="contact">
-    <div class="container">
-        <h2>Contact Me</h2>
-        <p>If you have any questions or want to collaborate on a project, feel free to reach out. I'd love to connect with you!</p>
-
-        <!-- Contact Form with Formspree -->
-        <form action="https://formspree.io/f/mwpvwqeo" method="POST" id="contact-form">
-            <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-
-        <!-- Additional Contact Links -->
-        <p>Email: <a href="mailto:sdommeti95@gmail.com">sdommeti95@gmail.com</a></p>
-        <p>GitHub: <a href="#" target="_blank">GitHub Profile</a></p>
-        <p>LinkedIn: <a href="#" target="_blank">LinkedIn Profile</a></p>
-    </div>
-</section>
-
-
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>If you have any questions or want to collaborate on a project, feel free to reach out!</p>
+            <form action="https://formspree.io/f/mwpvwqeo" method="POST" id="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
     </footer>
 
-    <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top">↑ Back to Top</button>
 
     <script src="script.js"></script>
 </body>
 </html>
-<script>
-    // JavaScript for simple form validation
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        if (!name || !email || !message) {
-            e.preventDefault();
-            alert('Please fill out all fields before submitting the form.');
-        }
-    });
-</script>
-
-
-
