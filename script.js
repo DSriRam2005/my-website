@@ -1,15 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var backToTopButton = document.getElementById("backToTop");
+    fetch("YOUR_DEPLOYED_SCRIPT_URL")
+    .then(response => response.json())
+    .then(data => {
+        let table = document.getElementById("responseTable");
+        table.innerHTML = ""; // Clear previous data
 
-    window.onscroll = function () {
-        if (window.pageYOffset > 300) {
-            backToTopButton.style.display = "block";
-        } else {
-            backToTopButton.style.display = "none";
-        }
-    };
-
-    backToTopButton.onclick = function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    };
+        data.forEach(row => {
+            let newRow = table.insertRow();
+            newRow.insertCell(0).textContent = row.timestamp;
+            newRow.insertCell(1).textContent = row.name;
+            newRow.insertCell(2).textContent = row.email;
+            newRow.insertCell(3).textContent = row.message;
+        });
+    })
+    .catch(error => console.error("Error fetching data:", error));
 });
