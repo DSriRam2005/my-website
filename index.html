@@ -71,18 +71,22 @@
             <p>GitHub: <a href="#" target="_blank">GitHub Profile</a></p>
             <p>LinkedIn: <a href="#" target="_blank">LinkedIn Profile</a></p>
 
-            <form id="contactForm">
-                <label for="name">Full Name:</label>
-                <input type="text" name="entry.2005620554" id="name" placeholder="Your Full Name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" name="entry.1045780047" id="email" placeholder="Your Email Address" required>
-                
-                <label for="message">Message:</label>
-                <textarea name="entry.839337160" id="message" placeholder="Your Message" required></textarea>
-                
-                <button type="submit" class="btn">Submit</button>
-            </form>
+            <form id="contactForm" action="https://docs.google.com/forms/d/e/1FAIpQLSc3WdXJ149iawfo6ddptQpKBSJNg28ewGCBuzbKMXZR2nBrZA/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+    <label for="name">Full Name:</label>
+    <input type="text" name="entry.2005620554" id="name" placeholder="Your Full Name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" name="entry.1045780047" id="email" placeholder="Your Email Address" required>
+    
+    <label for="message">Message:</label>
+    <textarea name="entry.839337160" id="message" placeholder="Your Message" required></textarea>
+    
+    <button type="submit" class="btn">Submit</button>
+</form>
+
+<!-- Hidden iframe to handle form submission -->
+<iframe name="hidden_iframe" style="display:none;" onload="if(submitted) { alert('Thank you! Your response has been submitted.'); document.getElementById('contactForm').reset(); submitted = false; }"></iframe>
+
         </div>
     </section>
 
