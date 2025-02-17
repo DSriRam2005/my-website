@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding-top: 60px; /* Prevent overlap due to fixed navbar */
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background */
+    color: #333; /* Dark gray text */
 }
 
 .container {
@@ -17,7 +19,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #2d6cdb; /* Primary color */
     padding: 10px 0;
     z-index: 1000;
     transition: background-color 0.3s;
@@ -43,7 +45,7 @@ body {
 
 /* Sticky Navbar */
 .sticky {
-    background-color: #222;
+    background-color: #2563eb; /* Lighter blue for sticky state */
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -70,7 +72,7 @@ body {
 .btn {
     display: inline-block;
     padding: 0.8rem 1.6rem;
-    background-color: #2d6cdb;
+    background-color: #2d6cdb; /* Primary color */
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -78,7 +80,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #2563eb;
+    background-color: #2563eb; /* Lighter blue on hover */
 }
 
 /* Form styling */
@@ -105,7 +107,7 @@ input, textarea {
 
 button {
     padding: 1rem;
-    background-color: #4CAF50;
+    background-color: #4caf50; /* Teal accent color */
     color: white;
     border: none;
     border-radius: 5px;
@@ -113,6 +115,5 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Slightly darker teal */
 }
-
